@@ -14,4 +14,5 @@ public interface OrderingCoffee {
     Payment payOrder(UUID orderId, CreditCard creditCard);
     Receipt readReceipt(UUID orderId);
     Order takeOrder(UUID orderId);
+    Order getOrder(UUID orderId);
 }

@@ -4,6 +4,7 @@ import br.com.incode.coffeeshop.adapter.in.rest.resource.OrderRequest;
 import br.com.incode.coffeeshop.adapter.in.rest.resource.OrderResponse;
 import br.com.incode.coffeeshop.application.in.OrderingCoffee;
 import lombok.RequiredArgsConstructor;
+import org.apache.coyote.Response;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
@@ -38,4 +39,11 @@ public class OrderController {
         orderingCoffee.cancelOrder(id);
         return ResponseEntity.noContent().build();
     }
+
+    @GetMapping("/order/{id}")
+    ResponseEntity<OrderResponse> getOrder(@PathVariable UUID id) {
+        var order = orderingCoffee.getOrder(id);
+        return ResponseEntity.ok(OrderResponse.fromDomain(order));
+    }
+
 }

@@ -68,4 +68,9 @@ public class CoffeeShop implements OrderingCoffee {
 
         return orders.save(order.markTaken());
     }
+
+    @Override
+    public Order getOrder(UUID orderId) {
+        return orders.findOrderById(orderId);
+    }
 }
