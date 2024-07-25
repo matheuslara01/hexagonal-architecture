@@ -8,7 +8,7 @@ This project is an example of implementing the hexagonal architecture in a Sprin
 # Required Technologies
 
  - ![Java-21](https://img.shields.io/badge/Java-21-blue)
- - ![Gradle](https://img.shields.io/badge/Docker-blue)
+ - ![Gradle](https://img.shields.io/badge/Gradle-blue)
 
 # Project structure
 
